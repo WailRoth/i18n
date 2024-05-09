@@ -57,6 +57,7 @@
     "@adonisjs/auth": "^9.2.1",
     "@adonisjs/core": "^6.9.0",
     "@adonisjs/cors": "^2.2.1",
+    "@adonisjs/i18n": "^2.1.0",
     "@adonisjs/inertia": "1.0.0-27",
     "@adonisjs/lucid": "^20.6.0",
     "@adonisjs/session": "^7.4.0",

@@ -13,5 +13,15 @@
 */
 
 import ConfigureCommand from '@adonisjs/core/commands/configure'
+import generateTranslations from "./src/generate_translations.js";
 
-export async function configure(_command: ConfigureCommand) {}
+export async function configure(command: ConfigureCommand) {
+  const codemods = await command.createCodemods()
+
+  await generateTranslations()
+
+  await codemods.updateRcFile((rcFile) => {
+    rcFile.addProvider('@izzyjs/route/izzy_provider')
+    rcFile.addCommand('@izzyjs/route/commands')
+  })
+}

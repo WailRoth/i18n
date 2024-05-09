@@ -15,7 +15,10 @@
   ],
   "exports": {
     ".": "./build/index.js",
-    "./types": "./build/src/types.js"
+    "./types": "./build/src/types.js",
+    "./commands": "./build/commands/izzy_18n.js",
+    "./izzy_provider": "./build/providers/translation_provider.js",
+    "./plugin/edge": "./build/src/plugin/edge.js"
   },
   "scripts": {
     "clean": "del-cli build",
@@ -34,7 +37,10 @@
     "prepublishOnly": "npm run build"
   },
   "keywords": [],
-  "author": "",
+  "authors": [
+    "wailroth",
+    "Incitador"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@adonisjs/assembler": "^7.2.3",
@@ -55,8 +61,12 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.4.2"
   },
+  "dependencies": {
+    "@adonisjs/i18n": "^2.1.0"
+  },
   "peerDependencies": {
-    "@adonisjs/core": "^6.2.0"
+    "@adonisjs/core": "^6.2.0",
+    "edge.js": "^6.0.2"
   },
   "publishConfig": {
     "access": "public",
